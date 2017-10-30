@@ -4,11 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start": "node server.js",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "postinstall": "ng build --aot -prod"
+    //"deploy": "git push origin master && git push heroku master" 
   },
   "private": true,
   "dependencies": {
